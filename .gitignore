@@ -1,0 +1,9 @@
+# Add this to .gitignore
+__pycache__/
+*.pyc
+.env
+*.pptx          # Block PPT uploads
+*.mp4           # Don't upload raw video
+*.zip
+node_modules/
+.DS_Store

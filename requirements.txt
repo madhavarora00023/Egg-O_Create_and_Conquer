@@ -1,0 +1,71 @@
+# ============================================================
+# EGG-O: Robotics Data Pipeline
+# requirements.txt — all dependencies to reproduce the pipeline
+# The Rizz-Bizz Company
+# ============================================================
+
+# --------------------------
+# Core Video I/O & Processing
+# --------------------------
+opencv-python>=4.9.0
+ffmpeg-python>=0.2.0         # Python bindings for FFmpeg
+imageio>=2.34.0
+imageio-ffmpeg>=0.4.9
+
+# --------------------------
+# Scene Segmentation
+# --------------------------
+scenedetect[opencv]>=0.6.3   # PySceneDetect — diff-based scene detection
+
+# --------------------------
+# Object Detection & Pose Estimation
+# --------------------------
+ultralytics>=8.1.0            # YOLOv8n (object detection) + YOLOv8n-pose (keypoints)
+
+# --------------------------
+# Hand Tracking & Gesture Detection
+# --------------------------
+mediapipe>=0.10.11            # Hand landmark detection & gesture recognition
+
+# --------------------------
+# Optical Flow & Motion Profiling
+# --------------------------
+# opencv-python (above) covers frame-difference optical flow
+
+# --------------------------
+# Image & Frame Utilities
+# --------------------------
+Pillow>=10.3.0                # Image I/O, brightness/contrast normalization
+numpy>=1.26.0                 # Array ops throughout the pipeline
+scipy>=1.13.0                 # Signal processing, entropy calculations
+
+# --------------------------
+# NLP / Caption Generation
+# --------------------------
+openai>=1.25.0                # GPT-4o API for NLP description generation
+# For local/offline captioning (alternative to GPT-4o):
+# transformers>=4.40.0        # LLaMA / HuggingFace models
+# torch>=2.2.0                # PyTorch backend for local models
+# accelerate>=0.28.0
+
+# --------------------------
+# Data Validation & Output
+# --------------------------
+jsonschema>=4.22.0            # Schema-based JSON dataset validation
+pydantic>=2.7.0               # Structured data models for annotation output
+
+# --------------------------
+# Utilities
+# --------------------------
+tqdm>=4.66.0                  # Progress bars for long pipeline stages
+loguru>=0.7.2                 # Structured logging
+python-dotenv>=1.0.1          # Load API keys from .env file
+typer>=0.12.0                 # CLI interface for running pipeline stages
+rich>=13.7.1                  # Pretty terminal output
+
+# --------------------------
+# Optional: Notebook / Analysis
+# --------------------------
+# jupyter>=1.0.0
+# matplotlib>=3.8.0
+# pandas>=2.2.0
